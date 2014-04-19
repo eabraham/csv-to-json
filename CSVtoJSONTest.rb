@@ -5,9 +5,9 @@ shared_context "shared_test_data" do
     begin
       @file = File.open('test_data.csv','r')
       @keys = @file.first
-    rescue
-      #TODO: Be more specific about the error types
-      puts "Test file doesn't exist or is empty"
+    rescue Exception => e
+      puts "Test file probably doesn't exist or is empty"
+      puts e
     end
     @sample_parsed = {
 	               "id"=>111010,
@@ -72,7 +72,6 @@ describe CSVtoJSON, "#parse" do include_context "shared_test_data"
   it "convert to ruby dictionary and array" do
      ctj = CSVtoJSON.new
      result = ctj.parse(@keys+@file.read)
-     puts result
      expect(result[0]).to eq(@sample_parsed)
   end
 end
