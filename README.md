@@ -1,7 +1,7 @@
 #csv-to-json
 ===========
 
-Simple CSV to JSON parser that does field mapping and handles a "modifier" relationship.  All keys must be enumerated on the first lines of each CSV file.  Each line represents an item and an item's fields are seperated by commas.
+Simple CSV to JSON parser that does field mapping and handles a "modifier" relationship.  All keys must be enumerated on the first lines of each CSV file.  Each line represents an item and an item's fields are separated by commas.
 
 ```
 id,description,price,cost,price_type,quantity_on_hand,modifier_1_name,modifier_1_price,modifier_2_name,modifier_2_price,modifier_3_name,modifier_3_price
