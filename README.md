@@ -19,7 +19,7 @@ id,description,price,cost,price_type,quantity_on_hand,modifier_1_name,modifier_1
 ##Assumptions
 
 1. The parser would need to be robust and sanitize data of poor quality.  In the event that a single CSV line throws a fatal error, catch it and log it for future review before continuing to process the remainder of the file.
-2. Considering that ShopKeep interacts with small businesses most of the files will be small (Max 100 lines) and not require a distributed solution to parse large CSV files. Many worker processes would be sufficient to convert thousands of files into JSON
+2. Considering that the most common use-case is interacting with small businesses most of the files will be small (Max 100 lines) and not require a distributed solution to parse large CSV files. Many worker processes would be sufficient to convert thousands of files into JSON
 3. This program is a source for a downstream ruby process which imports the JSON into a database
 
 ##Notes
